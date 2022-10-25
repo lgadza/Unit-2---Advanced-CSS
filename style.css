@@ -40,3 +40,13 @@
 .container .row .blog-main > :nth-child(4) ul > :nth-child(2) {
   /* background-color: brown; */
 }
+.float-right.mb-3.mr-3 {
+  /* background-color: yellowgreen; */
+}
+.blog-pagination > .btn.btn-outline-secondary.disabled {
+  /* background-color: black; */
+}
+.blog-footer .text-center a[href="https://twitter.com/mdo"]
+{
+  /* color: red; */
+}

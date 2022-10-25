@@ -12,9 +12,11 @@
     font-size: 3.5rem;
   }
 }
-.hero > h1 {
+.jumbotron.p-4.p-md-5.rounded > .col-md-6.px-0 .font-italic {
+  color: red;
 }
-.nav .d-flex .justify-content-between .mb-2 {
+.nav.d-flex.justify-content-between.mb-2 {
+  /* color: red; */
 }
 
 .container .row .col-md-8 .blog-post:first-of-type {
@@ -51,5 +53,5 @@
   /* color: red; */
 }
 .blog-post > :nth-child(3) {
-  background-color: red;
+  /* background-color: red; */
 }

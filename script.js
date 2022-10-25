@@ -5,11 +5,6 @@
 
 // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
 
-// Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
-
-// Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
-// EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
-
 let newNavItem = document.querySelector(
   ".nav.d-flex.justify-content-between.mb-2"
 );
@@ -28,13 +23,10 @@ let removeTwitter = document.querySelector(
 );
 console.log(removeTwitter);
 function removeTwiter() {
-  //   removeTwiter.remove();
+  removeTwitter.remove();
   removeTwiter.innerHtml = "";
 }
 removeTwiter();
-// window.onload = function () {
-//   removeTwiter;
-// };
 
 //Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
 
@@ -69,3 +61,26 @@ newPost.appendChild(h2);
 newPost.appendChild(p1);
 newPost.appendChild(p2);
 container.appendChild(newPost);
+
+// Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
+
+let older = document.querySelector(".btn.btn-outline-primary");
+let blogs = document.querySelectorAll(".blog-post");
+console.log(blogs);
+function removeLastBlog() {
+  blogs[blogs.length - 1].remove();
+}
+
+older.addEventListener("click", removeLastBlog);
+
+// Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
+
+let author = document.querySelectorAll(".blog-post-meta a");
+
+for (let i = 0; i < author.length; i++) {
+  author[i].addEventListener("mouseover", () => {
+    alert(`${author[i].textContent}`);
+  });
+}
+
+//corresponding parent card from the DOM, upon clicking on their “Continue reading” link

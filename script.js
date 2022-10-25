@@ -90,9 +90,7 @@ let continue2 = document.querySelector(".font-weight-bold");
 
 // console.log(continue2);
 let card = document.querySelector(".jumbotron.p-4.p-md-5.rounded");
-let cards = document.querySelectorAll(
-  ".col.p-4.d-flex.flex-column.position-static"
-);
+let cards = document.querySelectorAll(".col-md-6");
 
 continue2.addEventListener("click", () => {
   //   card.style.display = "hide";
@@ -100,6 +98,6 @@ continue2.addEventListener("click", () => {
 });
 for (let i = 0; i < continue1.length; i++) {
   continue1[i].addEventListener("click", () => {
-    cards[i].remove();
+    cards[i + 1].remove();
   });
 }

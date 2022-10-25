@@ -5,8 +5,6 @@
 
 // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
 
-// Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
-// Write a JavaScript functionality to add a new Blog Post (div with title and text)
 // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
 
 // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
@@ -37,3 +35,37 @@ removeTwiter();
 // window.onload = function () {
 //   removeTwiter;
 // };
+
+//Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+
+let firstP = document.querySelectorAll(".blog-post > :nth-child(3)");
+// console.log(firstP[0].textContent.slice(50));
+function trimEle() {
+  for (let i = 0; i <= firstP; i++) {
+    firstP[i].textContent.trim().slice(50);
+  }
+}
+trimEle();
+
+// Write a JavaScript functionality to add a new Blog Post (div with title and text)
+let container = document.querySelector(".container");
+let newPost = document.createElement("div");
+newPost.classList = "blog-post";
+let h2 = document.createElement("h2");
+h2.classList = "blog-post-title";
+h2.innerText = "Last Blog Post";
+let p1 = document.createElement("p");
+p1.classList = "blog-post-meta";
+p1.innerText = `December 23, 2013 by Louis`;
+
+let p2 = document.createElement("p");
+p2.innerText = `Cum sociis natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
+              consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
+              dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+              ut fermentum massa justo sit amet risus.`;
+
+newPost.appendChild(h2);
+newPost.appendChild(p1);
+newPost.appendChild(p2);
+container.appendChild(newPost);

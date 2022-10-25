@@ -50,3 +50,6 @@
 {
   /* color: red; */
 }
+.blog-post > :nth-child(3) {
+  background-color: red;
+}

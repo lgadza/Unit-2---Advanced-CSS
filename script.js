@@ -83,4 +83,23 @@ for (let i = 0; i < author.length; i++) {
   });
 }
 
-//corresponding parent card from the DOM, upon clicking on their “Continue reading” link
+// EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
+let continue1 = document.querySelectorAll(".stretched-link");
+let continue2 = document.querySelector(".font-weight-bold");
+// continue2.textContent;
+
+// console.log(continue2);
+let card = document.querySelector(".jumbotron.p-4.p-md-5.rounded");
+let cards = document.querySelectorAll(
+  ".col.p-4.d-flex.flex-column.position-static"
+);
+
+continue2.addEventListener("click", () => {
+  //   card.style.display = "hide";
+  card.remove();
+});
+for (let i = 0; i < continue1.length; i++) {
+  continue1[i].addEventListener("click", () => {
+    cards[i].remove();
+  });
+}
